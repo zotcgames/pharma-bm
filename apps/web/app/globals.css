@@ -1,0 +1,304 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f8ff;
+  color: #153047;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input {
+  font: inherit;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-copy {
+  padding: 18px 0;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #0f8a7e;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin: 12px 0;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #4a6070;
+  margin-bottom: 26px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #dfeaf3;
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 18px rgba(22, 70, 90, 0.08);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #153047;
+}
+
+.search-box button,
+.primary-btn,
+.secondary-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+}
+
+.search-box button,
+.primary-btn {
+  background: linear-gradient(135deg, #0f8a7e, #0d6976);
+  color: white;
+}
+
+.secondary-btn {
+  background: #ecf8f7;
+  color: #0d6976;
+}
+
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.stats-row div {
+  background: white;
+  border-radius: 18px;
+  padding: 18px 20px;
+  min-width: 120px;
+  box-shadow: 0 10px 24px rgba(17, 57, 76, 0.06);
+}
+
+.stats-row strong {
+  display: block;
+  font-size: 1.8rem;
+  color: #0d6976;
+}
+
+.stats-row span {
+  color: #52707f;
+}
+
+.map-panel {
+  background: white;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 20px 40px rgba(20, 55, 72, 0.08);
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.map-header button {
+  background: #eef9f7;
+  color: #0d6976;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.map-surface {
+  position: relative;
+  height: 360px;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(18, 74, 92, 0.05), rgba(18, 74, 92, 0.05)),
+    radial-gradient(circle at 20% 30%, rgba(36, 179, 139, 0.18), transparent 20%),
+    linear-gradient(135deg, #edf8ff, #dfeefb);
+}
+
+.map-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 138, 126, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 138, 126, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.marker {
+  position: absolute;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 7px 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.marker.user {
+  left: 50%;
+  top: 55%;
+  background: #1d1d1d;
+  color: white;
+}
+
+.marker.green {
+  left: 25%;
+  top: 38%;
+  background: #32b87a;
+  color: white;
+}
+
+.marker.gold {
+  right: 18%;
+  top: 30%;
+  background: #f4b942;
+  color: #472f00;
+}
+
+.marker.blue {
+  right: 25%;
+  bottom: 22%;
+  background: #3287f8;
+  color: white;
+}
+
+.marker.red {
+  left: 16%;
+  bottom: 18%;
+  background: #f25d5d;
+  color: white;
+}
+
+.list-section {
+  margin-top: 40px;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.list-header h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.pharmacy-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.pharmacy-card {
+  background: white;
+  border: 1px solid #e6edf4;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(17, 57, 76, 0.04);
+}
+
+.status-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.status-badge.green {
+  background: #eafaf2;
+  color: #158f5d;
+}
+
+.status-badge.gold {
+  background: #fff4d9;
+  color: #8a6200;
+}
+
+.status-badge.blue {
+  background: #e7f0ff;
+  color: #1f5ed1;
+}
+
+.status-badge.red {
+  background: #ffe8e8;
+  color: #c23333;
+}
+
+.pharmacy-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.pharmacy-card p {
+  margin: 0;
+  color: #5d7586;
+}
+
+.meta-row {
+  margin-top: 12px;
+  color: #48627a;
+  font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    flex-wrap: wrap;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
